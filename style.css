@@ -1,0 +1,24 @@
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background: linear-gradient(180deg,#08111a 0%,#0b0b0b 100%); color:#f7f4ea; min-height:100vh}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:rgba(0,0,0,0.3);backdrop-filter:blur(2px)}
+.brand h1{font-family:"Press Start 2P",monospace;font-size:12px;margin:0;color:#ffdde1}
+.nav-btn{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:8px 10px;margin-left:8px;color:inherit;border-radius:8px}
+.nav-btn.primary{background:rgba(255,10,30,0.06);border-color:rgba(255,10,30,0.2)}
+.screen{padding:28px;max-width:980px;margin:18px auto;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.7)}
+.center-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center}
+.creepy-title{font-family:"Creepster",cursive;font-size:88px;margin:0;letter-spacing:2px;color:#e9e7c9;text-shadow:3px 3px 0 #2b2b2b}
+.subtitle.retro{font-family:"Press Start 2P",monospace;margin-top:6px;font-size:12px;color:#bfb8a7}
+.intro-actions{margin-top:18px}
+.btn{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.02);cursor:pointer;margin:6px}
+.btn.primary{background:linear-gradient(90deg,#ff6b6b33,#ffb86b22)}
+.hidden{display:none}
+.stories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+.story-card{background:rgba(0,0,0,0.35);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.story-card h3{margin:0 0 8px 0;font-size:16px}
+.story-card .meta{font-size:11px;opacity:0.8;margin-bottom:8px}
+.media-row{display:flex;gap:12px;flex-wrap:wrap}
+label{display:block;margin-bottom:8px}
+input,textarea{width:100%;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+.media-preview{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.muted{opacity:0.7;color:#cfc8b6}
+.footer{padding:10px;text-align:center;opacity:0.85}
+@media(max-width:600px){.creepy-title{font-size:40px}.topbar{padding:8px}}

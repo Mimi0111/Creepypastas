@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Creepypasta — Created by: Mimi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand">
+      <h1 id="brand-title">Created by: Mimi</h1>
+    </div>
+    <nav>
+      <button id="btn-home" class="nav-btn">Inicio</button>
+      <button id="btn-read" class="nav-btn">Leer historias</button>
+      <button id="btn-add" class="nav-btn primary">Agregar historia</button>
+    </nav>
+  </header>
+
+  <!-- Intro screen -->
+  <section id="intro" class="screen center-screen">
+    <h2 class="creepy-title">Creepypasta</h2>
+    <p class="subtitle retro">Historias retro y tétricas — disponible en Chrome y móviles</p>
+    <div class="intro-actions">
+      <button id="intro-read" class="btn">Leer historias</button>
+      <button id="intro-add" class="btn">Agregar historia</button>
+    </div>
+  </section>
+
+  <!-- Read stories -->
+  <section id="read" class="screen hidden">
+    <h2>Historias publicadas</h2>
+    <div id="stories-list" class="stories-grid"></div>
+    <div id="no-stories" class="muted">No hay historias aún. Agrega la primera desde "Agregar historia".</div>
+  </section>
+
+  <!-- Add story -->
+  <section id="add" class="screen hidden">
+    <h2>Agregar historia</h2>
+    <form id="story-form">
+      <label>Título<input id="title" required maxlength="120" /></label>
+      <label>Autor (opcional)<input id="author" maxlength="80" /></label>
+      <label>Historia (texto)<textarea id="content" required rows="8"></textarea></label>
+
+      <div class="media-row">
+        <label>Foto (jpg/png)<input id="photo" type="file" accept="image/*" /></label>
+        <label>Video (mp4/webm)<input id="video" type="file" accept="video/*" /></label>
+        <label>Audio (mp3/wav)<input id="audio" type="file" accept="audio/*" /></label>
+      </div>
+
+      <div id="media-preview" class="media-preview"></div>
+
+      <div class="publish-options">
+        <label><input type="checkbox" id="use-github" /> Publicar en GitHub (opcional)</label>
+        <div id="github-settings" class="github-settings hidden">
+          <p class="muted">Para publicar en GitHub necesitas un Personal Access Token (repo scope) y los datos del repo. No compartas tu token públicamente.</p>
+          <label>Owner (usuario/organización)<input id="gh-owner" placeholder="tu-usuario" /></label>
+          <label>Repo<input id="gh-repo" placeholder="mi-repo" /></label>
+          <label>Path en repo (ej. stories/)<input id="gh-path" placeholder="stories/" /></label>
+          <label>Personal Access Token<input id="gh-token" placeholder="ghp_xxx..." type="password" /></label>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn primary">Publicar</button>
+        <button type="button" id="btn-save-local" class="btn">Guardar localmente</button>
+      </div>
+    </form>
+
+    <div id="form-feedback" class="muted"></div>
+  </section>
+
+  <footer class="footer">
+    <small>Hecho con cariño por Mimi — Sitio estático para GitHub Pages.</small>
+  </footer>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
